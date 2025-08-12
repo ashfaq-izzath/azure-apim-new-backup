@@ -1,0 +1,6 @@
+apimServiceName: azure-apim-prod-new
+namedValues:
+loggers:
+diagnostics:
+backends:
+apis:
