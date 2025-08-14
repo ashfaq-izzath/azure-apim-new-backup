@@ -1,4 +1,4 @@
-apimServiceName: azure-apim-prod-new
+apimServiceName: azure-apim-new
 namedValues:
 loggers:
 diagnostics:
