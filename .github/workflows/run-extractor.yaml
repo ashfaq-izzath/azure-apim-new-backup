@@ -168,6 +168,13 @@ jobs:
         with:
           name: artifacts-from-portal
           path: "${{ GITHUB.WORKSPACE }}/${{ env.API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH }}"
+          
+      - name: Configure Git and Commit Changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git diff --cached --quiet || git commit -m "Update extracted artifacts"
 
       - name: Create artifacts pull request
         uses: peter-evans/create-pull-request@v6
